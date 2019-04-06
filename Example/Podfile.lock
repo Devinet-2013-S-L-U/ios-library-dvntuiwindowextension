@@ -1,0 +1,16 @@
+PODS:
+  - DVNTUIWindowExtension (0.1.0)
+
+DEPENDENCIES:
+  - DVNTUIWindowExtension (from `../`)
+
+EXTERNAL SOURCES:
+  DVNTUIWindowExtension:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DVNTUIWindowExtension: 6dab74ec5545a154f4e223b724caa0cb7947a070
+
+PODFILE CHECKSUM: e28ddab93d0bdf682b29f81910b1de2d50bba310
+
+COCOAPODS: 1.7.0.beta.3
