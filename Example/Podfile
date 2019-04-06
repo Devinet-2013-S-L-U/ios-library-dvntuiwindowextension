@@ -1,0 +1,6 @@
+use_frameworks!
+target 'DVNTUIWindowExtension_Tests' do
+  pod 'DVNTUIWindowExtension', :path => '../'
+  
+  
+end
