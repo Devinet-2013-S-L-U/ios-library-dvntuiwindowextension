@@ -8,26 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3685F30D93F10152315F4F269CBA561B /* DVNTUIWindowExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB49A891050CB3964427DA9B28FF123 /* DVNTUIWindowExtension.swift */; };
-		5AD63B6535BB5A541084E6670E64436E /* Pods-DVNTUIWindowExtension_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BDD808D5FD7552C64ABE04C42F4AA9A /* Pods-DVNTUIWindowExtension_Tests-dummy.m */; };
 		63E0FE92BFB35535C9407C475D87E1F6 /* DVNTUIWindowExtension-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C404E74E383A9D67AAD5F5464A179A4 /* DVNTUIWindowExtension-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78B80CC675798E62C6C97A9B2E45BCCC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
 		92451BA3C2BFBBD9896015002D96F521 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB4607EFCA7C5F75397649E792E2AFCB /* Foundation.framework */; };
-		AB8700E0F3FAA8E4136F13E1B3D801C3 /* Pods-DVNTUIWindowExtension_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 49232B44F2FDFE70BD5B7C169711E041 /* Pods-DVNTUIWindowExtension_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D57F6350DAC838AB6EB96D0A2D2810F5 /* DVNTUIWindowExtension-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30367E46938D1A0E092A7E38B351B482 /* DVNTUIWindowExtension-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C2055E3B8610042E6FE3AFB2C31EAD2E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9F50EF2B5A7ED4D89607FB8BA2027554;
-			remoteInfo = DVNTUIWindowExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		0FC77631E6637DEF035833DE71511A30 /* Pods_DVNTUIWindowExtension_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DVNTUIWindowExtension_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1112E85565C4B20DD9C4758F89095EA3 /* Pods-DVNTUIWindowExtension_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-DVNTUIWindowExtension_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1938E69D3FED608159516733D7F93453 /* Pods-DVNTUIWindowExtension_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-DVNTUIWindowExtension_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		1A4B696F0F364F27CCE4362B09E6EE45 /* DVNTUIWindowExtension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DVNTUIWindowExtension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -58,14 +44,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				92451BA3C2BFBBD9896015002D96F521 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FB684017B0C95B15A3B886124D46DDD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				78B80CC675798E62C6C97A9B2E45BCCC /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				1A4B696F0F364F27CCE4362B09E6EE45 /* DVNTUIWindowExtension.framework */,
-				0FC77631E6637DEF035833DE71511A30 /* Pods_DVNTUIWindowExtension_Tests.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,14 +156,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		96DF5F156F7BD18E97DF9695075F14EE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AB8700E0F3FAA8E4136F13E1B3D801C3 /* Pods-DVNTUIWindowExtension_Tests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A2A9E2D6CAD01402CB92B3B797E89A1D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,25 +185,6 @@
 			productReference = 1A4B696F0F364F27CCE4362B09E6EE45 /* DVNTUIWindowExtension.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CC1FC9801F89DAF4BD3AF530E0F5EA44 /* Pods-DVNTUIWindowExtension_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C0C22C80588AE37612DEA3E9CE48F31D /* Build configuration list for PBXNativeTarget "Pods-DVNTUIWindowExtension_Tests" */;
-			buildPhases = (
-				96DF5F156F7BD18E97DF9695075F14EE /* Headers */,
-				4C0A2AA415160740DF1E2E687DBABF26 /* Sources */,
-				FB684017B0C95B15A3B886124D46DDD2 /* Frameworks */,
-				0966444819B6C9465408D7617D312BC6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A5C4BCD85F47BB5E05F9788E280A954E /* PBXTargetDependency */,
-			);
-			name = "Pods-DVNTUIWindowExtension_Tests";
-			productName = "Pods-DVNTUIWindowExtension_Tests";
-			productReference = 0FC77631E6637DEF035833DE71511A30 /* Pods_DVNTUIWindowExtension_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -258,19 +208,11 @@
 			projectRoot = "";
 			targets = (
 				9F50EF2B5A7ED4D89607FB8BA2027554 /* DVNTUIWindowExtension */,
-				CC1FC9801F89DAF4BD3AF530E0F5EA44 /* Pods-DVNTUIWindowExtension_Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0966444819B6C9465408D7617D312BC6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A00CB5762E31DDDBE1FC007F322BFDDE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -281,14 +223,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4C0A2AA415160740DF1E2E687DBABF26 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AD63B6535BB5A541084E6670E64436E /* Pods-DVNTUIWindowExtension_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		E9D29648D437252959375DE73A2D4BA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -299,15 +233,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A5C4BCD85F47BB5E05F9788E280A954E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DVNTUIWindowExtension;
-			target = 9F50EF2B5A7ED4D89607FB8BA2027554 /* DVNTUIWindowExtension */;
-			targetProxy = C2055E3B8610042E6FE3AFB2C31EAD2E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		576C3FBC6A9102B77E8A8445CAB5D776 /* Release */ = {
@@ -326,7 +251,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DVNTUIWindowExtension/DVNTUIWindowExtension-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DVNTUIWindowExtension/DVNTUIWindowExtension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DVNTUIWindowExtension/DVNTUIWindowExtension.modulemap";
 				PRODUCT_MODULE_NAME = DVNTUIWindowExtension;
@@ -407,73 +332,6 @@
 			};
 			name = Debug;
 		};
-		AF0150E5A957062DD9AA62E649285A01 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = EF5A8AD85C7DE3D2A6E4B794BC03DECD /* Pods-DVNTUIWindowExtension_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DVNTUIWindowExtension_Tests/Pods-DVNTUIWindowExtension_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DVNTUIWindowExtension_Tests/Pods-DVNTUIWindowExtension_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D7653F400EE7585D4748600946F9ED6F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1938E69D3FED608159516733D7F93453 /* Pods-DVNTUIWindowExtension_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-DVNTUIWindowExtension_Tests/Pods-DVNTUIWindowExtension_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-DVNTUIWindowExtension_Tests/Pods-DVNTUIWindowExtension_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		EA778C97EC47D574CA6989749F1B8C93 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C992B38D1D6375FBAFF706F05799ACFF /* DVNTUIWindowExtension.xcconfig */;
@@ -490,7 +348,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/DVNTUIWindowExtension/DVNTUIWindowExtension-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/DVNTUIWindowExtension/DVNTUIWindowExtension-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/DVNTUIWindowExtension/DVNTUIWindowExtension.modulemap";
 				PRODUCT_MODULE_NAME = DVNTUIWindowExtension;
@@ -582,15 +440,6 @@
 			buildConfigurations = (
 				AB4D69770D8ACE3A05E80BB3502666F6 /* Debug */,
 				F232B5ECA11A71BFA199A229B323F454 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C0C22C80588AE37612DEA3E9CE48F31D /* Build configuration list for PBXNativeTarget "Pods-DVNTUIWindowExtension_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D7653F400EE7585D4748600946F9ED6F /* Debug */,
-				AF0150E5A957062DD9AA62E649285A01 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

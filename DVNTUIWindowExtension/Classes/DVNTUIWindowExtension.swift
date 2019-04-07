@@ -9,7 +9,7 @@ import UIKit
 
 extension UIWindow
 {
-    func visibleViewController(completed: @escaping (UIViewController?) -> Void)
+    public func getVisibleViewController(completed: @escaping (UIViewController?) -> Void)
     {
         DispatchQueue.main.async{
             if let rootViewController: UIViewController = self.rootViewController {
