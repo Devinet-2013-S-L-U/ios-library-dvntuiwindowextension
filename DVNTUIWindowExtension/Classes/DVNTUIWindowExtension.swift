@@ -20,25 +20,27 @@ extension UIWindow
         }
     }
     
-    fileprivate func getVisibleViewControllerFrom(vc:UIViewController) -> UIViewController
+    fileprivate func getVisibleViewControllerFrom(vc:UIViewController) -> UIViewController?
     {
         switch(vc) {
         case is UINavigationController:
-            let navigationController = vc as! UINavigationController
-            return self.getVisibleViewControllerFrom( vc: navigationController.visibleViewController!)
+            if let navigationController = vc as? UINavigationController, let visibleViewController = navigationController.visibleViewController {
+                return self.getVisibleViewControllerFrom(vc: visibleViewController)
+            }
+            return nil
         case is UITabBarController:
-            let tabBarController = vc as! UITabBarController
-            return self.getVisibleViewControllerFrom(vc: tabBarController.selectedViewController!)
+            if let tabBarController = vc as? UITabBarController, let selectedViewController = tabBarController.selectedViewController {
+                return self.getVisibleViewControllerFrom(vc: selectedViewController)
+            }
+            return nil
         default:
             if let presentedViewController = vc.presentedViewController {
                 if let presentedViewController2 = presentedViewController.presentedViewController {
                     return self.getVisibleViewControllerFrom(vc: presentedViewController2)
-                }
-                else{
+                }else{
                     return vc
                 }
-            }
-            else{
+            }else{
                 return vc
             }
         }
