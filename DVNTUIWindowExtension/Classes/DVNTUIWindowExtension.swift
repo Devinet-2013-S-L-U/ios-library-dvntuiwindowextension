@@ -12,15 +12,18 @@ extension UIWindow
     public func getVisibleViewController(completed: @escaping (UIViewController?) -> Void)
     {
         DispatchQueue.main.async{
-            if let rootViewController: UIViewController = self.rootViewController {
-                completed(self.getVisibleViewControllerFrom(vc: rootViewController))
+            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+                while let presentedViewController = topController.presentedViewController {
+                    topController = presentedViewController
+                }
+                completed(self.getVisibleViewControllerFrom(vc: topController))
             }else{
                 completed(nil)
             }
         }
     }
     
-    fileprivate func getVisibleViewControllerFrom(vc:UIViewController) -> UIViewController?
+    fileprivate func getVisibleViewControllerFrom(vc: UIViewController) -> UIViewController?
     {
         switch(vc) {
         case is UINavigationController:
