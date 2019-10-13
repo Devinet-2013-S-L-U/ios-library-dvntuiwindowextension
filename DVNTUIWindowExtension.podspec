@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'DVNTUIWindowExtension'
-  s.version          = '1.0.4'
+  s.version          = '1.0.5'
   s.summary          = 'An amazing UIWindow estension.'
   s.description      = 'A extension that let\'s you find the current visible controller.'
   s.homepage         = 'https://www.devinet.es'
@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   s.swift_versions   = ['3.0', '4.0', '4.1', '4.2', '5.0']
   s.source           = { :git => 'https://bitbucket.org/Devinet_Team/ios-library-dvntuiwindowextension.git', :tag => s.version.to_s }
   s.frameworks       = 'UIKit'
-  s.source_files     = 'DVNTUIWindowExtension/Classes/**/*'
-  s.exclude_files    = 'DVNTUIWindowExtension/**/*.plist'
+  s.source_files     = 'Sources/DVNTUIWindowExtension/Classes/**/*'
+  s.exclude_files    = 'Sources/DVNTUIWindowExtension/**/*.plist'
 
 end
