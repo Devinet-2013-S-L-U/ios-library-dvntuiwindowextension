@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name             = 'DVNTUIWindowExtension'
-  s.version          = '1.0.11'
+  s.version          = '1.0.12'
   s.summary          = 'An amazing UIWindow estension.'
   s.description      = 'A extension that let\'s you find the current visible controller.'
   s.homepage         = 'https://www.devinet.es'
