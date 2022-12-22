@@ -12,7 +12,7 @@ extension UIWindow
     public func getVisibleViewController(completed: @escaping (UIViewController?) -> Void)
     {
         DispatchQueue.main.async{
-            if var topController = UIApplication.shared.keyWindow?.rootViewController {
+            if var topController = UIApplication.shared.windows.filter {$0.isKeyWindow}.first {
                 while let presentedViewController = topController.presentedViewController {
                     topController = presentedViewController
                 }
