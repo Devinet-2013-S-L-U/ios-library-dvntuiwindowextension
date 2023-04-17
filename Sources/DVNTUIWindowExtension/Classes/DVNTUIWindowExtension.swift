@@ -9,40 +9,49 @@ import UIKit
 
 extension UIWindow
 {
-    public func getVisibleViewController(completed: @escaping (UIViewController?) -> Void)
-    {
+    public func getVisibleViewController(completed: @escaping (UIViewController?) -> Void) {
         DispatchQueue.main.async {
-            if let window = UIApplication.shared.mainKeyWindow, let presentedViewController = window.rootViewController {
+            if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }), let presentedViewController = window.rootViewController {
                 completed(self.getVisibleViewControllerFrom(vc: presentedViewController))
-            }else{
+            } else {
                 completed(nil)
             }
         }
     }
     
-    fileprivate func getVisibleViewControllerFrom(vc: UIViewController) -> UIViewController?
-    {
-        switch(vc) {
-        case is UINavigationController:
-            if let navigationController = vc as? UINavigationController, let visibleViewController = navigationController.visibleViewController {
+    fileprivate func getVisibleViewControllerFrom(vc: UIViewController) -> UIViewController? {
+        if let navigationController = vc as? UINavigationController {
+            if let visibleViewController = navigationController.visibleViewController {
                 return self.getVisibleViewControllerFrom(vc: visibleViewController)
             }
-            return nil
-        case is UITabBarController:
-            if let tabBarController = vc as? UITabBarController, let selectedViewController = tabBarController.selectedViewController {
+            return navigationController
+        }
+
+        if let tabBarController = vc as? UITabBarController {
+            if let selectedViewController = tabBarController.selectedViewController {
                 return self.getVisibleViewControllerFrom(vc: selectedViewController)
             }
-            return nil
-        default:
-            if let presentedViewController = vc.presentedViewController {
-                if let presentedViewController2 = presentedViewController.presentedViewController {
-                    return self.getVisibleViewControllerFrom(vc: presentedViewController2)
-                }else{
-                    return vc
-                }
-            }else{
-                return vc
-            }
+            return tabBarController
         }
+
+        if let presentedViewController = vc.presentedViewController {
+            return self.getVisibleViewControllerFrom(vc: presentedViewController)
+        }
+
+        if let splitViewController = vc as? UISplitViewController {
+            if let lastViewController = splitViewController.viewControllers.last {
+                return self.getVisibleViewControllerFrom(vc: lastViewController)
+            }
+            return splitViewController
+        }
+
+        if let pageViewController = vc as? UIPageViewController {
+            if let viewControllers = pageViewController.viewControllers, viewControllers.count > 0 {
+                return self.getVisibleViewControllerFrom(vc: viewControllers[0])
+            }
+            return pageViewController
+        }
+
+        return vc
     }
 }
