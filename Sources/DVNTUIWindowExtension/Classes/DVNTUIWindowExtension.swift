@@ -11,10 +11,15 @@ extension UIWindow
 {
     public func getVisibleViewController(completed: @escaping (UIViewController?) -> Void) {
         DispatchQueue.main.async {
-            if let window = UIApplication.shared.windows.first(where: { $0.isKeyWindow }), let presentedViewController = window.rootViewController {
+            if #available(iOS 13.0, *), let windowScene = self.windowScene, let mainWindow = windowScene.windows.first(where: { $0.isKeyWindow }),
+                let presentedViewController = mainWindow.rootViewController {
                 completed(self.getVisibleViewControllerFrom(vc: presentedViewController))
             } else {
-                completed(nil)
+                if let presentedViewController = self.rootViewController {
+                    completed(self.getVisibleViewControllerFrom(vc: presentedViewController))
+                } else {
+                    completed(nil)
+                }
             }
         }
     }
